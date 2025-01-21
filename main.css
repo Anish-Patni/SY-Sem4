@@ -1,12 +1,24 @@
 body {
     background-color: #f4f4f4; /* Light background color */
-    background-image: url(https://www.usatoday.com/gcdn/-mm-/266a386ee77c481fa1fed2bec113aa9d88125f97/c=0-129-1975-1245/local/-/media/2016/07/20/USATODAY/USATODAY/636046215665251051-ore-Jackpot-Rec-John-Cranford-002-rs.jpg?width=1975&height=1116&fit=crop&format=pjpg&auto=webp);
-    /* background-size: cover; */
-    background-position: center 0; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #ffffff; /* Changes font color to white for visibility */
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+body::before {
+    content: '';
+    background-image: url(https://www.usatoday.com/gcdn/-mm-/266a386ee77c481fa1fed2bec113aa9d88125f97/c=0-129-1975-1245/local/-/media/2016/07/20/USATODAY/USATODAY/636046215665251051-ore-Jackpot-Rec-John-Cranford-002-rs.jpg?width=1975&height=1116&fit=crop&format=pjpg&auto=webp);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    position: absolute; /* Position absolute to cover the body */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(2px); /* Applies a blur effect to the background image */
+    z-index: -1; /* Places the pseudo-element behind the content */
 }
 
 header {
@@ -34,10 +46,21 @@ nav a:hover {
 }
 
 main {
-    padding: 20px;
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
     text-align: center;
 }
 
 h1 {
-    color: black; /* Ensures the heading is visible */
+    color: black;
+    font-size: xx-large;
+    height: 20px;
+}
+
+p {
+    color: black;
+    font-size:x-large;
 }
