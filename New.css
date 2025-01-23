@@ -1,12 +1,27 @@
 body {
-    background-color: #e0e0e0; /* Light background color */
+    background-color: #e0e0e0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    background-image: url(https://www.usatoday.com/gcdn/-mm-/266a386ee77c481fa1fed2bec113aa9d88125f97/c=0-129-1975-1245/local/-/media/2016/07/20/USATODAY/USATODAY/636046215665251051-ore-Jackpot-Rec-John-Cranford-002-rs.jpg?width=1975&height=1116&fit=crop&format=pjpg&auto=webp);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(2px);
+    z-index: -1;
 }
 
 header {
-    background-color: #444; /* Darker header background */
+    background-color: rgba(51, 51, 51, 0.8);
     color: white;
     padding: 10px 0;
 }
@@ -26,14 +41,25 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #666; /* Lighter hover effect */
+    background-color: #555;
 }
 
 main {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
 }
 
 h1 {
-    color: #222; /* Dark text color */
+    color: black;
+    font-size: xx-large;
+    height: 20px;
+}
+
+p {
+    color: black;
+    font-size: x-large;
 }
