@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - The Recording Co.</title>
-<link rel="stylesheet" href="Login.css"> <!-- Link to the Login CSS file -->
+<link rel="stylesheet" href="Login.css">
 </head>
 <body>
 <header>
 <nav>
-
 <a href="New.html">New</a>
 <a href="Store.html">Store</a>
 <a href="Contact.html">Contact</a>
@@ -20,6 +19,13 @@
 <main>
 <h1>Login</h1>
 <p>Please enter your credentials to log in.</p>
+<form action="login_action.php" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
 </main>
 </body>
 </html>
